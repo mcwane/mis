@@ -10,7 +10,7 @@
 
 	<meta charset="utf-8"/>
 
-	<title> MIS Ductile | Dashboard </title>
+	<title> MIS iConnect | Dashboard </title>
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -78,6 +78,36 @@
 			<ul class="nav navbar-nav">
 				<!-- DOC: Remove data-hover="dropdown" and data-close-others="true" attributes below to disable the horizontal opening on mouse hover -->
 				<li class="classic-menu-dropdown">
+					<a data-toggle="dropdown" href="#" data-hover="megamenu-dropdown" data-close-others="true">
+					<img src="assets/admin/layout/img/sidebar_inline_toggler_icon_default.jpg" alt="logo" class="logo-default" /> <b>Condition Monitor</b>
+					<!-- <i class="fa fa-angle-down"></i>  -->
+					</a>
+					<ul class="dropdown-menu pull-left" style="width:228px; z-index:1050; font-size:15px;">
+						<li>
+							<a href="#">
+							<i class="fa fa-bookmark-o"></i> <b >EHS</b> </a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="icon-settings"></i> <b>Production</b>  </a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="icon-settings"></i> <b>Lighting</b>  </a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="icon-settings"></i> <b>Utilities</b>  </a>
+						</li>
+						 
+					</ul>
+				</li>
+				
+				
+				<li class="classic-menu-dropdown">
+					<a href="#"> <i class="fa fa-ellipsis-v"></i> </a>
+				</li>
+				<li class="classic-menu-dropdown">
 					<a href="index1.html"> Home </a>
 				</li>
 				
@@ -120,7 +150,7 @@
 				</li>
 				
 				<li class="classic-menu-dropdown">
-					<a href="index1.html"> Reports </a>
+					<a href="report-summary.html"> Reports </a>
 				</li>
 				
 				<li class="classic-menu-dropdown">
@@ -292,17 +322,9 @@
 												<input type="hidden" id="select2_sample5" class="form-control select2" value="TEMP_220">
 											</div>
 									</div>
-									
+									 
 									<div class="form-group">
-											<label for="notifyif" class="col-md-3 control-label">Select Status</label>
-										 
-											<div class="col-md-8">
-												<input type="hidden" id="select2_sample5" class="form-control select2" value="TEMP_220">
-											</div>
-									</div>
-										
-									<div class="form-group">
-										<label class="col-md-3 control-label"> Temperature Range(&deg;F) </label>
+										<label class="col-md-3 control-label"> Thresholds(&deg;F) </label>
 										<div class="col-md-4">
 											<div id="temp-range" class="slider bg-blue-hoki"></div>
 											<div>
@@ -318,29 +340,39 @@
 											<table class="table table-bordered">
 											  <thead>
 												  <tr>
-													  <td> Less than 45&deg;F </td>
-													  <td> <label class="checkbox inline">
-															<input type="checkbox" id="inlineCheckbox1" value="option1"> 
-															<i class="fa fa-comment" style="color:skyblue;"></i> Message
+														<td> Less than 45&deg;F </td>
+														<td> 
+														 
+														 <label id="message-numadd" class="checkbox inline bold popover-btn">															 
+															<i class="fa fa-comment-o"></i> <span style="text-decoration: underline;">Message</span>
+														  </label>														 
+ 
+														</td>
+														
+														
+														<td> 
+														  <label class="checkbox inline bold popover-btn1"> 
+															<i class="fa fa-envelope-o"></i> <span style="text-decoration: underline;">Email</span>
 														  </label>
-														  <label class="checkbox inline">
-															<input type="checkbox" id="inlineCheckbox2" value="option2"> 
-															<i class="fa fa-envelope-o" style="color:skyblue;"></i> Email
-														  </label></td>											   
+														   
+														</td>											   
 												  </tr>
 											  </thead>   
 											  <tbody>
 												<tr>
 													<td> Greater than 150&deg;F </td>
 													<td>
-														  <label class="checkbox inline">
-															<input type="checkbox" id="inlineCheckbox1" value="option21"> 
-															<i class="fa fa-comment" style="color:skyblue;"></i> Message
+														  <label class="checkbox inline bold">
+															<!-- <input type="checkbox" id="inlineCheckbox1" value="option21">  -->
+															<i class="fa fa-comment-o"></i> Message
+														  </label>														   
+													</td>
+													<td> 
+														  <label class="checkbox inline bold">
+															<!-- <input type="checkbox" id="inlineCheckbox2" value="option22">  -->
+															<i class="fa fa-envelope-o"></i> Email
 														  </label>
-														  <label class="checkbox inline">
-															<input type="checkbox" id="inlineCheckbox2" value="option22"> 
-															<i class="fa fa-envelope-o" style="color:skyblue;"></i> Email
-														  </label>
+														  
 													</td>											 
 												</tr>
 											  </tbody>
@@ -418,27 +450,8 @@
 										<textarea class="form-control"  id="textarea2" cols="20" rows="3"></textarea>
 									</div>
 								</div>
-								 
-								
-								<div class="form-group">
-									<div class="col-md-offset-2 col-md-4">
-										<div class="checkbox">
-											<label>
-											<input type="checkbox"> Remember me </label>
-										</div>
-									</div>
-								</div>
-								<hr>
-								<!-- <div class="form-group">
-									<div class="col-md-offset-2 col-md-10">
-										<button type="submit" class="btn blue">Save</button>
-										<button type="submit" class="btn btn-default">Cancel</button>
-									</div>
-								</div> -->
-							</form>
-							
-							 
-							 
+								  
+							</form> 
 							 
 						</div>
 						<div class="modal-footer">
@@ -451,8 +464,90 @@
 				<!-- /.modal-dialog -->
 			</div>
 			<!-- /.modal -->
-			<!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+			
 			 
+			<div id="popover-content1" class="hidden" style="margin-left:5%;">				
+				<div class="col-md-12xx"> 
+						
+					<div class="portlet box blue-hoki no-space">
+						<div class="portlet-title">
+							<div class="caption">
+								<input type="text" style="width:160px; margin-right:10px; " /> 
+							</div>
+							<div class="actions">
+								<!-- <a href="#" class="btn btn-default btn-sm">
+								<i class="fa fa-pencil"></i> Edit </a> -->
+								<a href="#" class="btn btn-default btn-sm" style="margin-top:4px; height:25px;">
+								<i class="fa fa-plus"></i> Add </a>
+							</div>
+						</div>
+						<div class="portlet-body no-space">
+							<div class="scroller no-space" style="height:200px" data-rail-visible="1" data-rail-color="blue" data-handle-color="#a1b2bd">
+								  
+								<div class="list-group" style="width:100%;">
+									<a href="#" class="list-group-item"> 
+										<span class="text-primary"> <i class="fa fa-phone-square"></i> 91 671525548 </span> <span class="badge badge-danger"> X </span> 
+									</a>
+									
+									<a href="#" class="list-group-item"> 
+										<span class="text-primary"><i class="fa fa-phone-square"></i> 91 872345678 </span> <span class="badge badge-danger"> X </span> 
+									</a>
+									
+									<a href="#" class="list-group-item"> 
+										<span class="text-primary"><i class="fa fa-phone-square"></i> 91 671525548 </span> <span class="badge badge-danger"> X </span> 
+									</a>
+								</div>
+								 
+							</div>
+						</div>
+					</div>
+					<!-- END Portlet PORTLET-->
+										  		
+				</div>				 		 
+			</div>
+			<!-- /.modal -->
+			
+			<div id="popover-content2" class="hidden" style="margin-left:5%;">				
+				<div class="col-md-12xx"> 
+								 
+					<div class="portlet box blue-hoki no-space">
+						<div class="portlet-title">
+							<div class="caption">
+								<input type="text" style="width:160px; margin-right:10px; " /> 
+							</div>
+							<div class="actions">
+								<!-- <a href="#" class="btn btn-default btn-sm">
+								<i class="fa fa-pencil"></i> Edit </a> -->
+								<a href="#" class="btn btn-info btn-sm" style="margin-top:4px; height:25px;">
+								<i class="fa fa-plus"></i> Add </a>
+							</div>
+						</div>
+						<div class="portlet-body no-space">
+							<div class="scroller no-space" style="height:200px" data-rail-visible="1" data-rail-color="blue" data-handle-color="#a1b2bd">
+								 
+								<div class="list-group" style="width:100%;">
+									<a href="#" class="list-group-item"> 
+										<span class="text-primary"> <i class="fa fa-phone-square"></i> charles@gmail.com </span> <span class="badge badge-danger"> X </span> 
+									</a>
+									
+									<a href="#" class="list-group-item"> 
+										<span class="text-primary"><i class="fa fa-phone-square"></i> robinson@gmail.com </span> <span class="badge badge-danger"> X </span> 
+									</a>
+									
+									<a href="#" class="list-group-item"> 
+										<span class="text-primary"><i class="fa fa-phone-square"></i> george@gmail.com </span> <span class="badge badge-danger"> X </span> 
+									</a>
+								</div>
+								 
+							</div>
+						</div>
+					</div>
+					<!-- END Portlet PORTLET-->
+										  		
+				</div>				 		 
+			</div>
+			<!-- /.modal -->
+			
 			 
 			 
 	 <h3 class="page-title"> Alert Summary </h3>
@@ -504,61 +599,34 @@
 					<table class="table table-striped table-bordered table-hover" id="sample_1">
 						<thead>
 							<tr> 
-								<th>
-									Alert Name
-								</th>
-								<th>
-									Type
-								</th>
-								<th colspan="2">
-									Threshold Values
-								</th>
-								<th>
-									Notifications Type
-								</th>
-								<th>
-									Status
-								</th>
-								<th>
-									Actions
-								</th>
+								<th> Alert Name </th>
+								<th> Type </th>
+								<th colspan="2"> Threshold Values </th>
+								<th> Notifications Type </th>								 
+								<th> Actions </th>
 							</tr>
 							 <tr>
 								  <th> </th>
 								  <th> </th>
 								  <th>Low</th>
 								  <th>High</th>
-								  <th> </th>
+								   
 								  <th> </th>
 								  <th> </th>
 							  </tr>
 						</thead>
 						<tbody>
-							<tr class="odd gradeX">
-								<td>AIRFLW_220</td>
-								<td class="center">Air Flow Sensor</td> 
-								<td class="center">20</td>
-								<td class="center">180</td>
-								<td class="center">
-									 <i class="fa fa-comment" style="color:skyblue;"></i> &nbsp;&nbsp;
-									 <i class="fa fa-envelope-o" style="color:skyblue;"></i> 
-								</td>
-								<td class="center"> <span class="label label-success"> Active </span> </td>
-								<td class="center">
-									<button class="btn btn-sm btn-primary"> <i class="fa fa-edit"></i></button>
-									<button class="btn btn-sm btn-danger"> <i class="fa fa-trash-o"></i> </button>
-								</td>
-							</tr>
+						 
 							<tr class="odd gradeX">
 								<td>VIBR_1012</td>
 								<td class="center">Vibration Sensor</td>
 								<td class="center">0.0</td>
 								<td class="center">3.0</td>
 								<td class="center">
-									 <i class="fa fa-comment" style="color:skyblue;"></i> &nbsp;&nbsp; 
-									 <i class="fa fa-envelope-o" style="color:skyblue;"></i> 
+									 <i class="fa fa-comment text-primary"></i> &nbsp;&nbsp; 
+									 <i class="fa fa-envelope-o text-primary"></i> 
 								</td>
-								<td class="center"> <span class="label label-success"> Active </span> </td>
+								<!-- <td class="center"> <span class="label label-success"> Active </span> </td> -->
 								<td class="center">
 									<button class="btn btn-sm btn-primary"> <i class="fa fa-edit"></i></button>
 									<button class="btn btn-sm btn-danger"> <i class="fa fa-trash-o"></i> </button>
@@ -570,9 +638,9 @@
 								<td class="center">120</td>
 								<td class="center">280</td>
 								<td class="center">								 
-									<i class="fa fa-comment" style="color:skyblue;"></i> 
+									<i class="fa fa-comment text-primary"></i> 
 								</td>
-								<td class="center"> <span class="label label-info"> Suppress </span> </td>
+								<!-- <td class="center"> <span class="label label-info"> Suppress </span> </td> -->
 								<td class="center">
 									<button class="btn btn-sm btn-primary"> <i class="fa fa-edit"></i></button>
 									<button class="btn btn-sm btn-danger"> <i class="fa fa-trash-o"></i> </button>
@@ -584,9 +652,9 @@
 								<td class="center">65</td>
 								<td class="center">220</td>
 								<td class="center">									 
-									 <i class="fa fa-envelope-o" style="color:skyblue;"></i> 
+									 <i class="fa fa-envelope-o text-primary"></i> 
 								</td>
-								<td class="center"> <span class="label label-danger"> Inactive </span> </td>
+								<!-- <td class="center"> <span class="label label-danger"> Inactive </span> </td> -->
 								<td class="center">
 									<button class="btn btn-sm btn-primary"> <i class="fa fa-edit"></i></button>
 									<button class="btn btn-sm btn-danger"> <i class="fa fa-trash-o"></i> </button>
@@ -599,10 +667,10 @@
 								<td class="center">0.1</td>
 								<td class="center">2.0</td>
 								<td class="center">
-									 <i class="fa fa-comment" style="color:skyblue;"></i> &nbsp;&nbsp;
-									 <i class="fa fa-envelope-o" style="color:skyblue;"></i> 
+									 <i class="fa fa-comment text-primary"></i> &nbsp;&nbsp;
+									 <i class="fa fa-envelope-o text-primary"></i> 
 								</td>
-								<td class="center"> <span class="label label-success"> Active </span> </td>
+								<!-- <td class="center"> <span class="label label-success"> Active </span> </td> -->
 								<td class="center">
 									<button class="btn btn-sm btn-primary"> <i class="fa fa-edit"></i></button>
 									<button class="btn btn-sm btn-danger"> <i class="fa fa-trash-o"></i> </button>
@@ -611,40 +679,7 @@
 							 
 							</tbody>
 						</table>
-					
-					<!-- <div class="table-toolbar">
-								<div class="row">
-									<div class="col-md-6">
-										<div class="btn-group">
-										<form action="alerts-add.html" class="form-horizontal form-row-sepe" role="form">
-											<button id="sample_editable_1_new" class="btn blue-hoki addbtn " type="submit">
-											Add New <i class="fa fa-plus"></i>
-											</button>
-										</form>	
-										</div>
-									</div>  
-									 <div class="col-md-6">
-										<div class="btn-group pull-right">
-											<button class="btn dropdown-toggle" data-toggle="dropdown">Export <i class="fa fa-angle-down"></i>
-											</button>
-											<ul class="dropdown-menu pull-right">
-												<li>
-													<a href="#">
-													Print </a>
-												</li>
-												<li>
-													<a href="#">
-													Save as PDF </a>
-												</li>
-												<li>
-													<a href="#">
-													Export to Excel </a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>  -->
+				 
 					</div>
 					
 					</div>
@@ -654,8 +689,7 @@
 				
 			</div>
 			
-		<div class="clearfix">
-			</div>
+				<div class="clearfix"></div>
 			 
 					
 				</div>
@@ -709,6 +743,7 @@
 <script type="text/javascript" src="assets/global/plugins/select2/select2.min.js"></script>
 <script type="text/javascript" src="assets/global/plugins/jquery-multi-select/js/jquery.multi-select.js"></script> 
 <script type="text/javascript" src="assets/global/plugins/bootstrap-toastr/toastr.min.js"></script>
+<script src="assets/global/plugins/holder.js" type="text/javascript"></script> 
 <!-- END PAGE LEVEL PLUGINS -->
 
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
@@ -728,12 +763,42 @@
 	<script>
 	jQuery(document).ready(function() {
 	 
-					
+				$('.newphone').hide();
 				$( ".addbtn" ).click(function() {
-					
 				  $('.hideflag1').show();
 				  ComponentsIonSliders.init();
 				});
+				
+				$( "#addphone" ).click(function() {
+				$('.newphone').show();
+				
+				});
+				
+				var options = {
+					content: function () {
+						return $("#popover-content1").html();
+					},
+					placement: "bottom",
+					container: "body",
+					toggle: "popover",
+					title: "",
+					html: true
+				};
+				
+				var options2 = {
+					content: function () {
+						return $("#popover-content2").html();
+					},
+					placement: "bottom",
+					container: "body",
+					toggle: "popover",
+					title: "",
+					html: true
+				};
+
+				$('.popover-btn').popover(options); 
+				$('.popover-btn1').popover(options2); 
+				
 				
 				$("select.thresholds").change(function(){
 					$( "select option:selected").each(function(){

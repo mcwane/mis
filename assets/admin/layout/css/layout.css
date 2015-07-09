@@ -110,6 +110,7 @@ Page Header
   position: relative;
   float: left;
   margin-left:30px;
+  margin-top:8px;
   transition: all 0.6s;
 }
 .page-header.navbar .search-form .input-group .form-control {
@@ -150,7 +151,7 @@ Page Header
 
 .page-header.navbar .search-form.open {
  /*  transition: all 0.6s; */
-  width: 15%;
+  width: 5%;
   height:35px;
   margin-top:8px;
 }

@@ -911,3 +911,85 @@ body {
 .block-spinner-bar > div {
   background: #20c5ad;
 }
+
+
+/* your custom CSS \*/
+	@-moz-keyframes pulsate {
+		from {
+			-moz-transform: scale(0.25);
+			opacity: 1.8;
+		}
+		95% {
+			-moz-transform: scale(1.3);
+			opacity: 0;
+		}
+		to {
+			-moz-transform: scale(0.3);
+			opacity: 0.5;
+		}
+	}
+	
+	@-webkit-keyframes pulsate {
+		from {
+			-webkit-transform: scale(0.25);
+			opacity: 1.8;
+		}
+		95% {
+			-webkit-transform: scale(1.3);
+			opacity: 0;
+		}
+		to {
+			-webkit-transform: scale(0.3);
+			opacity: 0.5;
+		}
+	}
+	
+/* get the container that's just outside the marker image, which just happens to have our Marker title in it */	 
+.gps_ring {
+    border: 3px solid #999;
+    -webkit-border-radius: 30px;
+    height: 50px;
+    width: 50px;
+	 
+    position: relative;
+    left:0px;
+    top:0px;
+	margin:-25px 0 0 -5px;
+	z-index: 95;
+	
+    -moz-animation: pulsate 1.5s ease-in-out infinite;
+	-webkit-animation: pulsate 1.5s ease-in-out infinite; 
+		
+		/* -webkit-animation: pulse 2s linear infinite;
+		-moz-animation: pulse 2s linear infinite;  */
+		border:1pt solid #fff;
+		
+		/* make a circle */
+		-moz-border-radius:51px;
+		-webkit-border-radius:51px;
+		border-radius:51px;
+		/* multiply the shadows, inside and outside the circle */
+		-moz-box-shadow:inset 0 0 5px #e74c3c, inset 0 0 5px #e74c3c, inset 0 0 5px #e74c3c, 0 0 5px #e74c3c, 0 0 5px #e74c3c, 0 0 5px #e74c3c;
+		-webkit-box-shadow:inset 0 0 5px #e74c3c, inset 0 0 5px #e74c3c, inset 0 0 5px #e74c3c, 0 0 5px #e74c3c, 0 0 5px #e74c3c, 0 0 5px #e74c3c;
+		box-shadow:inset 0 0 5px #e74c3c, inset 0 0 5px #e74c3c, inset 0 0 5px #e74c3c, 0 0 5px #e74c3c, 0 0 5px #e74c3c, 0 0 5px #e74c3c;
+}
+	
+  @-webkit-keyframes pulse 
+  {       
+    0% {-webkit-transform: scale(0); opacity: 0;}
+    8% {-webkit-transform: scale(0); opacity: 0;}
+    15% {-webkit-transform: scale(0.1); opacity: 1;}
+    30% {-webkit-transform: scale(0.5); opacity: 1;}
+    100% {opacity: 0; -webkit-transform: scale(1);}
+  }
+
+  @-moz-keyframes pulse 
+  {       
+    0% {-moz-transform: scale(0); opacity: 0;}
+    8% {-moz-transform: scale(0); opacity: 0;}
+    15% {-moz-transform: scale(0.1); opacity: 1;}
+    30% {-moz-transform: scale(0.5); opacity: 1;}
+    100% {opacity: 0; -moz-transform: scale(1);}
+  }
+  
+  

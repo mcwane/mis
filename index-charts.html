@@ -74,6 +74,36 @@
 		<div class="hor-menu hidden-sm hidden-xs">
 			<ul class="nav navbar-nav">
 				<!-- DOC: Remove data-hover="dropdown" and data-close-others="true" attributes below to disable the horizontal opening on mouse hover -->
+				<li class="classic-menu-dropdown">
+					<a data-toggle="dropdown" href="#" data-hover="megamenu-dropdown" data-close-others="true">
+					<img src="assets/admin/layout/img/sidebar_inline_toggler_icon_default.jpg" alt="logo" class="logo-default" /> <b>Conditional Monitor</b>
+					<!-- <i class="fa fa-angle-down"></i>  -->
+					</a>
+					<ul class="dropdown-menu pull-left" style="width:228px; z-index:1050; font-size:15px;">
+						<li>
+							<a href="#">
+							<i class="fa fa-bookmark-o"></i> <b >EHS</b> </a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="icon-settings"></i> <b>Production</b>  </a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="icon-settings"></i> <b>Lighting</b>  </a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="icon-settings"></i> <b>Utilities</b>  </a>
+						</li>
+						 
+					</ul>
+				</li>
+				
+				
+				<li class="classic-menu-dropdown">
+					<a href="#"> <i class="fa fa-ellipsis-v"></i> </a>
+				</li>
 				<li class="classic-menu-dropdown active">
 					<a href="index1.html"> Home <span class="selected"></span> </a>
 				</li>
@@ -113,7 +143,7 @@
 				</li>
 				
 				<li class="classic-menu-dropdown">
-					<a href="index1.html"> Reports </a>
+					<a href="report-summary.html"> Reports </a>
 				</li>
 				
 				<li class="classic-menu-dropdown">
@@ -298,96 +328,263 @@
 			 
 			<!-- BEGIN PAGE CONTENT-->
 			<div class="row margin-top-20">
-				<div class="col-md-12">
-		
-		<!-- BEGIN DASHBOARD STATS -->
-				<div class="col-md-6 col-sm-6">
-					<!-- BEGIN PORTLET-->
-					<div class="portlet light bg-inverse">
-						<div class="portlet-title">
-							<div class="caption">
-								<i class="icon-bar-chart font-green-sharp"></i>
-								<span class="caption-subject font-green-sharp"><b>Temperature</b></span>
-								<!-- <span class="caption-helper">daily stats...</span> -->
-							</div>
-							<!-- <div class="actions">
-								<div class="btn-group btn-group-devided" data-toggle="buttons">
-									<label class="btn btn-transparent grey-salsa btn-circle btn-sm active">
-									<input type="radio" name="options" class="toggle" id="option1">New</label>
-									<label class="btn btn-transparent grey-salsa btn-circle btn-sm">
-									<input type="radio" name="options" class="toggle" id="option2">Returning</label>
-								</div>
-							</div> -->
-						</div>
-						<div class="portlet-body">
-							<div id="chart_1" class="chart" style="height: 500px;"> </div>							
-						</div>
-					</div>
-					<!-- END PORTLET-->
-				</div>
+			
 				
-				
-				<div class="col-md-6 col-sm-6">
-					<!-- BEGIN PORTLET-->
-					<div class="portlet light bg-inverse">
-						<div class="portlet-title">
-							
-							<div class="caption">
-								<i class="icon-share font-red-sunglo"></i>
-								<span class="caption-subject font-red-sunglo"><b>Vibration</b></span>
-								<!-- <span class="caption-helper">daily stats...</span> -->
-							</div>
-							
-							<!-- <div class="actions">
-								<div class="btn-group pull-right">
-									<a href="" class="btn grey-salsa btn-circle btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-									Filter Range<span class="fa fa-angle-down">
-									</span>
-									</a>
-									<ul class="dropdown-menu pull-right">
-										<li>
-											<a href="javascript:;">
-											Q1 2014 <span class="label label-sm label-default">
-											past </span>
-											</a>
-										</li>
-										<li>
-											<a href="javascript:;">
-											Q2 2014 <span class="label label-sm label-default">
-											past </span>
-											</a>
-										</li>
-										<li class="active">
-											<a href="javascript:;">
-											Q3 2014 <span class="label label-sm label-success">
-											current </span>
-											</a>
-										</li>
-										<li>
-											<a href="javascript:;">
-											Q4 2014 <span class="label label-sm label-warning">
-											upcoming </span>
-											</a>
-										</li>
-									</ul>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					 
+						<!-- BEGIN PORTLET -->
+								<div class="portlet box green" style="background-color:transparent;">
+									<div class="portlet-title">
+										<div class="caption caption-md">
+											<i class="icon-bar-chart theme-font hide"></i>
+											<span class="caption-subject bold uppercase">Machine-1001</span>
+											<span class="caption-helper hide">weekly stats...</span>
+										</div>
+										
+										<div class="actions">
+											<div class="btn-group btn-group-devided" data-toggle="buttons">
+												 
+												<!-- <button type="button" id="current1" class="btn btn-sm btn-circle green-jungle"> Current </button>
+												<button type="button" id="history1" class="btn btn-sm btn-circle green-jungle"> History </button> 
+												
+												<div class="btn-group btn-group-circle" data-toggle="buttons">
+													<label class="btn btn-xs green-jungle active" id="current1">
+													<input type="radio" class="toggle"> Current </label>
+													<label class="btn btn-xs green-jungle" id="history1" >
+													<input type="radio" class="toggle"> History </label>													 
+												</div> -->
+												 
+											</div>
+										</div>
+									</div>
+									
+									<div class="portlet-body">
+										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+										 
+											<div class="portlet">
+												<div class="portlet-title">
+													<div class="caption">
+														<i class="icon-bar-chart font-green-sharp"></i>
+														<span class="caption-subject font-green-sharp"><b>Temperature chart</b></span>
+														<!-- <span class="caption-helper">daily stats...</span> -->
+													</div>
+													<div class="actions">
+													
+														 <div class="btn-group btn-group-devided" data-toggle="buttons">
+														 08/01/2015 &nbsp; <span aria-hidden="true" class="icon-calendar blue-sharp"></span>
+														 
+														<!-- <label class="btn btn-transparent grey-salsa btn-circle btn-sm active">
+															<input type="radio" name="options" class="toggle" id="option1">New</label>
+															<label class="btn btn-transparent grey-salsa btn-circle btn-sm">
+															<input type="radio" name="options" class="toggle" id="option2">Returning</label> -->
+														</div> 
+													</div> 
+												</div>
+												<div class="portlet-body">
+													<div id="chart_1" class="chart" style="height: 300px;"> </div>							
+												</div>
+											</div>
+										</div>  
+										
+										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+										
+											<!-- BEGIN PORTLET-->
+											<div class="portlet">
+												<div class="portlet-title">							
+													<div class="caption">
+														<i class="icon-share font-red-sunglo"></i>
+														<span class="caption-subject font-red-sunglo"><b>Vibration</b></span>
+														<!-- <span class="caption-helper">daily stats...</span> -->
+													</div>
+													<div class="actions">
+														<div class="btn-group btn-group-devided" data-toggle="buttons">
+														08/01/2015 &nbsp; <span aria-hidden="true" class="icon-calendar blue-sharp"></span>
+														
+														<!-- <label class="btn btn-transparent grey-salsa btn-circle btn-sm active">
+															<input type="radio" name="options" class="toggle" id="option1">New</label>
+															<label class="btn btn-transparent grey-salsa btn-circle btn-sm">
+															<input type="radio" name="options" class="toggle" id="option2">Returning</label> -->
+														</div>
+													</div> 
+												</div>
+												
+												<div class="portlet-body">						
+													<div id="chart_vibe" class="chart" style="height:300px;"> </div>								
+												</div>
+											</div>
+											<!-- END PORTLET-->
+										
+										
+										</div> 
+									</div>
+									
+									<div class="clearfix"> </div>
 								</div>
-							</div>
-						 --></div>
-						
-						<div class="portlet-body">						
-							<div id="chart_vibe" class="chart" style="height: 500px;"> </div>								
-						</div>
-					</div>
-					<!-- END PORTLET-->
+							  
 				</div>
-		  
-		<!-- END DASHBOARD STATS --> 
-
+					<!-- END PORTLET -->
+				
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 activemachine">
+					 
+						<!-- BEGIN PORTLET -->
+								<div class="portlet box green" style="background-color:transparent">
+									<div class="portlet-title">
+										<div class="caption caption-md">
+											<i class="icon-bar-chart theme-font hide"></i>
+											<span class="caption-subject bold uppercase">Machine-1002</span>
+											<span class="caption-helper hide">weekly stats...</span>
+										</div>
+										
+										<div class="actions">
+											<div class="btn-group btn-group-devided" data-toggle="buttons">
+												<div class="btn-group btn-group-circle" data-toggle="buttons">
+													<label class="btn btn-xs green-jungle active" id="current4">
+													<input type="radio" class="toggle"> Current </label>
+													<label class="btn btn-xs green-jungle" id="history4" >
+													<input type="radio" class="toggle"> History </label>													 
+												</div>
+												
+												<!-- <button type="button" id="current4" class="btn btn-sm btn-circle green-jungle"> Current </button>
+												<button type="button" id="history4" class="btn btn-sm btn-circle green-jungle"> History </button> -->
+												 
+											</div>
+										</div>
+									</div>
+									
+									<div class="portlet-body form">
+										<div class="number-stats" style="margin:0px;">
+										
+										<!-- <div id="pulsate-regular" style="padding:5px;">
+											 Repeating Pulsate
+										</div> -->
+											
+												<table class="table table-bordered table-hover" style="margin:0px;">												
+													<tbody>
+														<tr>
+															<td>
+																<img src="assets/admin/layout/img/sl30.jpg" class="img-responsive" alt="logo" /> 
+															</td>
+															
+															<td style="width:30%"><!--  style="background-color: #ffHzd6" -->
+																	<div class="stat-left box blue">
+																		<div class="title"> <h4> Temperature </h4> </div>
+																		
+																		<!-- <div class="stat-chart"> 
+																			<div class="sparkline_bar2"></div>
+																		</div> -->
+																		<div class="stat-number">																		
+																			<div class="number">
+																				 62 &deg;F
+																			</div>
+																		</div>
+																	</div>
+															</td>
+															
+															<td style="width:32%">
+																 
+																	<div class="stat-left">
+																		<div class="title text-right" style="width:90px;"> <h4> Vibration </h4> </div>
+																		<!-- <div class="stat-chart">														 
+																			<div class="sparkline_bar2"></div>
+																		</div> -->
+																		<div class="stat-number">
+																			<div class="number">
+																				 1.8 Hz
+																			</div>
+																		</div>
+																	</div>
+																 
+															</td>
+															 
+														</tr>
+													</tbody>
+												</table>											 
+										</div> 
+										 
+										<div id="history-block4" class="table-scrollable1 table-scrollable-borderless" style="margin:0px 0px;">
+											<table class="table table-hover">
+											<thead>
+											<tr class="uppercase">												
+												<th style="width:50%;"> 
+													<!-- <i class="fa fa-history"></i>  -->
+													<img src="assets/admin/layout/img/icon-history.png" alt="icon history" /> </th>
+												<th style="width:30%;">
+													<!-- <i class="fa fa-fire font-red"></i>  --> 
+													 <img src="assets/admin/layout/img/icon-temp.png" alt="icon temperature" />
+												</th>
+												<th>
+													<!-- <i class="fa fa-database font-red"></i>  -->
+													 <img src="assets/admin/layout/img/icon-vibe.png" alt="icon Vibration" />
+												</th>												
+											</tr>
+											</thead>
+											<tr>												
+												<td>
+													 <span class="bold theme-font">08:00</span>
+												</td>												
+												<td>
+													 68 &deg;F
+												</td>
+												<td>
+													2.6 Hz
+												</td>
+											</tr>
+											<tr>												
+												<td>
+													 <span class="bold theme-font">08:15</span>
+												</td>												
+												<td>
+													 73 &deg;F
+												</td>
+												<td>
+													1.8 Hz
+												</td>
+											</tr>
+											<tr>												
+												<td>
+													 <span class="bold theme-font">08:40</span>
+												</td>												
+												<td>
+													 70 &deg;F
+												</td>
+												<td>
+													2.0 Hz
+												</td>
+											</tr>
+											<tr>												
+												<td>
+													 <span class="bold theme-font">08:50</span>
+												</td>												
+												<td>
+													 66 &deg;F
+												</td>
+												<td>
+													2.2 Hz
+												</td>
+											</tr>
+											</table>
+											
+											<div class="scroller-footer">
+												<div class="btn-arrow-link pull-right">
+													<a href="#">View more</a>
+													<i class="icon-arrow-right"></i>
+												</div>
+											</div>
+										</div>
+									
+								
+									</div>
+									
+								
+								</div>
+							  
+				</div>
+					<!-- END PORTLET  -->
+				
 		<div class="clearfix">
 			</div>
+			
 			 
-					
-				</div>
 			</div>
 			<!-- END PAGE CONTENT-->
 		</div>

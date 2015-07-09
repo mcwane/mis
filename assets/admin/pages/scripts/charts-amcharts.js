@@ -15,22 +15,22 @@ var ChartsAmcharts = function() {
             "color":    '#888',
             
             "dataProvider": [{
-                "year": "M1",
+                "year": "6:00",
                 "maxim": 50 
             }, {
-                "year": "M2",
+                "year": "6:05",
                 "maxim": 45 
             }, {
-                "year": "M3",
-                "maxim": 68 
+                "year": "6:10",
+                "maxim": 46 
             }, {
-                "year": "M4",
-                "maxim": 75 
+                "year": "6:15",
+                "maxim": 55 
             }, {
-                "year": "M5",
-                "maxim": 70  
+                "year": "6:20",
+                "maxim": 48  
             }, {
-                "year": "M6",
+                "year": "6:25",
                 "maxim": 45 
             }],
             "valueAxes": [{
@@ -89,22 +89,22 @@ var ChartsAmcharts = function() {
             "color":    '#888',
             
             "dataProvider": [{
-                "year": "M1",
+                "year": "6:05",
                 "maxim": 1.5 
             }, {
-                "year": "M2",
+                "year": "6:10",
                 "maxim": 1.8 
             }, {
-                "year": "M3",
+                "year": "6:15",
                 "maxim": 2
             }, {
-                "year": "M4",
+                "year": "6:20",
                 "maxim": 2.2 
             }, {
-                "year": "M5",
+                "year": "6:25",
                 "maxim": 1.7  
             }, {
-                "year": "M6",
+                "year": "6:30",
                 "maxim": 2.5,
 				"alpha": 0.2
             }],
@@ -3276,10 +3276,312 @@ var ChartsAmcharts = function() {
         });
     }
 
+	
+	
+	var initChartSampletTem = function() {
+        var chart = AmCharts.makeChart("chart_machine1", {
+            "type": "serial",
+            "theme": "light",
+            "pathToImages": Metronic.getGlobalPluginsPath() + "amcharts/amcharts/images/",
+            "autoMargins": false,
+            "marginLeft": 30,
+            "marginRight": 8,
+            "marginTop": 10,
+            "marginBottom": 26,
+
+            "fontFamily": 'Open Sans',            
+            "color":    '#888',
+            
+            "dataProvider": [{
+                "year": "02/07/15",
+                "maxim": 50 
+            }, {
+                "year": "03/07/15",
+                "maxim": 45 
+            }, {
+                "year": "04/07/15",
+                "maxim": 68 
+            }, {
+                "year": "05/07/15",
+                "maxim": 75 
+            }],
+            "valueAxes": [{
+                "axisAlpha": 0,
+                "position": "left"
+            }],
+            "startDuration": 1,
+            "graphs": [{
+                "alphaField": "alpha",
+                "balloonText": "<span style='font-size:13px;'>[[title]] in [[category]] is <b>[[value]]</b> [[additional]] &deg;F</span>",
+                "dashLengthField": "dashLengthColumn",
+                "fillAlphas": 1,
+                "title": "Temperature",
+                "type": "column",
+                "valueField": "maxim"
+            }, {
+                "balloonText": "<span style='font-size:13px;'>[[title]] in [[category]] is <b>[[value]]</b> [[additional]] &deg;F</span>",
+                "bullet": "round",
+                "dashLengthField": "dashLengthLine",
+                "lineThickness": 3,
+                "bulletSize": 7,
+                "bulletBorderAlpha": 1,
+                "bulletColor": "#FFFFFF",
+                "useLineColorForBulletBorder": true,
+                "bulletBorderThickness": 3,
+                "fillAlphas": 0,
+                "lineAlpha": 1,
+                "title": "Average",
+                "valueField": "avg"
+            }],
+            "categoryField": "year",
+            "categoryAxis": {
+                "gridPosition": "start",
+                "axisAlpha": 0,
+                "tickLength": 0
+            }
+        });
+
+        $('#chart_1').closest('.portlet').find('.fullscreen').click(function() {
+            chart.invalidateSize();
+        });
+    }
+
+	
+	
+	var initChartSampletHum = function() {
+        var chart = AmCharts.makeChart("chart_machine2", {
+            "type": "serial",
+            "theme": "light",
+            "pathToImages": Metronic.getGlobalPluginsPath() + "amcharts/amcharts/images/",
+            "autoMargins": false,
+            "marginLeft": 30,
+            "marginRight": 8,
+            "marginTop": 10,
+            "marginBottom": 26,
+
+            "fontFamily": 'Open Sans',            
+            "color":    '#888',
+            
+             "dataProvider": [{
+                "year": "02/07/15",
+                "maxim": 50 
+            }, {
+                "year": "03/07/15",
+                "maxim": 45 
+            }, {
+                "year": "04/07/15",
+                "maxim": 68 
+            }, {
+                "year": "05/07/15",
+                "maxim": 75 
+            }],
+            "valueAxes": [{
+                "axisAlpha": 0,
+                "position": "left"
+            }],
+            "valueAxes": [{
+                "axisAlpha": 0,
+                "position": "left"
+            }],
+            "startDuration": 1,
+            "graphs": [{
+                "alphaField": "alpha",
+                "balloonText": "<span style='font-size:13px;'>[[title]] in [[category]] is <b>[[value]]</b> [[additional]] Hz</span>",
+                "dashLengthField": "dashLengthColumn",
+                "fillAlphas": 1,
+                "title": "Temperature",
+                "type": "column",
+                "valueField": "maxim"
+            }, {
+                "balloonText": "<span style='font-size:13px;'>[[title]] in [[category]] is <b>[[value]]</b> [[additional]] Hz</span>",
+                "bullet": "round",
+                "dashLengthField": "dashLengthLine",
+                "lineThickness": 3,
+                "bulletSize": 7,
+                "bulletBorderAlpha": 1,
+                "bulletColor": "#FFFFFF",
+                "useLineColorForBulletBorder": true,
+                "bulletBorderThickness": 3,
+                "fillAlphas": 0,
+                "lineAlpha": 1,
+                "title": "Average",
+                "valueField": "avg"
+            }],
+            "categoryField": "year",
+            "categoryAxis": {
+                "gridPosition": "start",
+                "axisAlpha": 0,
+                "tickLength": 0
+            }
+        });
+
+        $('#chart_1').closest('.portlet').find('.fullscreen').click(function() {
+            chart.invalidateSize();
+        });
+    }
+	
+	
+	
+	
+	
+	var initChartSampletTemMac2 = function() {
+        var chart = AmCharts.makeChart("chart_machine3", {
+            "type": "serial",
+            "theme": "light",
+            "pathToImages": Metronic.getGlobalPluginsPath() + "amcharts/amcharts/images/",
+            "autoMargins": false,
+            "marginLeft": 30,
+            "marginRight": 8,
+            "marginTop": 10,
+            "marginBottom": 26,
+
+            "fontFamily": 'Open Sans',            
+            "color":    '#888',
+            
+            "dataProvider": [{
+                "year": "02/07/15",
+                "maxim": 50 
+            }, {
+                "year": "03/07/15",
+                "maxim": 45 
+            }, {
+                "year": "04/07/15",
+                "maxim": 68 
+            }, {
+                "year": "05/07/15",
+                "maxim": 75 
+            }],
+            "valueAxes": [{
+                "axisAlpha": 0,
+                "position": "left"
+            }],
+            "startDuration": 1,
+            "graphs": [{
+                "alphaField": "alpha",
+                "balloonText": "<span style='font-size:13px;'>[[title]] in [[category]] is <b>[[value]]</b> [[additional]] &deg;F</span>",
+                "dashLengthField": "dashLengthColumn",
+                "fillAlphas": 1,
+                "title": "Temperature",
+                "type": "column",
+                "valueField": "maxim"
+            }, {
+                "balloonText": "<span style='font-size:13px;'>[[title]] in [[category]] is <b>[[value]]</b> [[additional]] &deg;F</span>",
+                "bullet": "round",
+                "dashLengthField": "dashLengthLine",
+                "lineThickness": 3,
+                "bulletSize": 7,
+                "bulletBorderAlpha": 1,
+                "bulletColor": "#FFFFFF",
+                "useLineColorForBulletBorder": true,
+                "bulletBorderThickness": 3,
+                "fillAlphas": 0,
+                "lineAlpha": 1,
+                "title": "Average",
+                "valueField": "avg"
+            }],
+            "categoryField": "year",
+            "categoryAxis": {
+                "gridPosition": "start",
+                "axisAlpha": 0,
+                "tickLength": 0
+            }
+        });
+
+        $('#chart_1').closest('.portlet').find('.fullscreen').click(function() {
+            chart.invalidateSize();
+        });
+    }
+
+	
+	
+	var initChartSampletHumMac2 = function() {
+        var chart = AmCharts.makeChart("chart_machine4", {
+            "type": "serial",
+            "theme": "light",
+            "pathToImages": Metronic.getGlobalPluginsPath() + "amcharts/amcharts/images/",
+            "autoMargins": false,
+            "marginLeft": 30,
+            "marginRight": 8,
+            "marginTop": 10,
+            "marginBottom": 26,
+
+            "fontFamily": 'Open Sans',            
+            "color":    '#888',
+            
+             "dataProvider": [{
+                "year": "02/07/15",
+                "maxim": 50 
+            }, {
+                "year": "03/07/15",
+                "maxim": 45 
+            }, {
+                "year": "04/07/15",
+                "maxim": 68 
+            }, {
+                "year": "05/07/15",
+                "maxim": 75 
+            }],
+            "valueAxes": [{
+                "axisAlpha": 0,
+                "position": "left"
+            }],
+            "valueAxes": [{
+                "axisAlpha": 0,
+                "position": "left"
+            }],
+            "startDuration": 1,
+            "graphs": [{
+                "alphaField": "alpha",
+                "balloonText": "<span style='font-size:13px;'>[[title]] in [[category]] is <b>[[value]]</b> [[additional]] Hz</span>",
+                "dashLengthField": "dashLengthColumn",
+                "fillAlphas": 1,
+                "title": "Temperature",
+                "type": "column",
+                "valueField": "maxim"
+            }, {
+                "balloonText": "<span style='font-size:13px;'>[[title]] in [[category]] is <b>[[value]]</b> [[additional]] Hz</span>",
+                "bullet": "round",
+                "dashLengthField": "dashLengthLine",
+                "lineThickness": 3,
+                "bulletSize": 7,
+                "bulletBorderAlpha": 1,
+                "bulletColor": "#FFFFFF",
+                "useLineColorForBulletBorder": true,
+                "bulletBorderThickness": 3,
+                "fillAlphas": 0,
+                "lineAlpha": 1,
+                "title": "Average",
+                "valueField": "avg"
+            }],
+            "categoryField": "year",
+            "categoryAxis": {
+                "gridPosition": "start",
+                "axisAlpha": 0,
+                "tickLength": 0
+            }
+        });
+
+        $('#chart_1').closest('.portlet').find('.fullscreen').click(function() {
+            chart.invalidateSize();
+        });
+    }
+	
+	
+	
+	
+	
+	
+	
     return {
         //main function to initiate the module
 
         init: function() {
+		
+		 initChartSampletTem();	
+            initChartSampletHum();
+
+            initChartSampletTemMac2();
+			 initChartSampletHumMac2();
 
             initChartSample1();			
 			initChartSampleVibe();
