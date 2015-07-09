@@ -2044,7 +2044,7 @@ System feeds
 }
 .feeds li {
   background-color: #fafafa;
-  color: #82949a;
+  color: #333;
   margin-bottom: 7px;
 }
 .feeds li:before, .feeds li:after {
@@ -2101,7 +2101,7 @@ System feeds
   padding: 4px 9px 5px 4px;
   text-align: right;
   font-style: italic;
-  color: #c1cbd0;
+  color: #666;
 }
 
 .feeds li .col3 {
@@ -2113,7 +2113,7 @@ System feeds
   padding: 4px 9px 5px 4px;
   text-align: right;
   font-style: italic;
-  color: #c1cbd0;
+  color: #666;
 }
 
 /***

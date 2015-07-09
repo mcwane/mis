@@ -17,7 +17,7 @@ var ComponentsjQueryUISliders = function () {
                 }
             });
 			
-			 // vertical range sliders
+			 // Horizontal range sliders
             $("#temp-range").slider({
                 isRTL: Metronic.isRTL(),
                 range: true,
@@ -26,9 +26,28 @@ var ComponentsjQueryUISliders = function () {
                 step: 5,
                 values: [45, 120],
                 slide: function (event, ui) {
-                    $("#slider-range-temp").text(ui.values[0] + "°F  - " + ui.values[1] + "°F");
+                   // $("#slider-range-temp").text(ui.values[0] + "°F  - " + ui.values[1] + "°F");
+					$("#temp-rangefrom").text(ui.values[0] + "°F");
+					$("#temp-rangeto").text(ui.values[1] + "°F");
+					
                 }
             });
+			
+			
+			 // Horizontal range sliders
+            $("#vibr-range").slider({
+                isRTL: Metronic.isRTL(),
+                range: true,
+				min: 0,
+                max: 15,
+                step: 1,
+                values: [2.0, 5],
+                slide: function (event, ui) {
+                    $("#vibr-rangefrom").text(ui.values[0] + "Hz");
+					$("#vibr-rangeto").text(ui.values[1] + "Hz");
+                }
+            });
+			
             
             // snap inc
             $("#slider-snap-inc").slider({

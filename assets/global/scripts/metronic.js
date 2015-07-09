@@ -387,6 +387,12 @@ var Metronic = function() {
         Metronic.initSlimScroll('.scroller');
     };
 
+	
+	 $('html').on('click.popover.data-api',function() {
+    $poped.popover('hide');
+});
+	
+	
     // Handles Image Preview using jQuery Fancybox plugin
     var handleFancybox = function() {
         if (!jQuery.fancybox) {

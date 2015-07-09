@@ -128,10 +128,10 @@
 				<li class="classic-menu-dropdown">
 					<a href="report-summary.html"> Reports </a>
 				</li>
-				
+				<!-- 
 				<li class="classic-menu-dropdown">
 					<a href=""> Admin </a>
-				</li>
+				</li> -->
 			 
 			</ul>
 		</div>
@@ -261,7 +261,7 @@
 			 
 			 
 			 
-			<h3 class="page-title"> Alerts Configuration</h3>
+			<!-- <h3 class="page-title"> Alerts Configuration</h3>
 	 		
 			<div class="page-bar">
 				<ul class="page-breadcrumb">
@@ -281,7 +281,7 @@
 					 
 				</ul>
 				 
-			</div>
+			</div> -->
 			<!-- END PAGE HEADER-->
 			 
 			<!-- BEGIN PAGE CONTENT-->
@@ -294,7 +294,7 @@
 					<div class="portlet box blue-hoki">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-gift"></i> Messages
+								<i class="fa fa-gift"></i> Messages Log
 							</div>
 							<!--<div class="tools">
 								<a href="" class="collapse">
@@ -309,9 +309,9 @@
 						</div>
 						<div class="portlet-body">
 
-							<div class="scroller" style="height: 300px; width:400px;" data-always-visible="1" data-rail-visible="0">
-											<ul class="feeds">
-												<li>
+							<div class="scroller" style="height: 300px; width:400px; color:#000;" data-always-visible="1" data-rail-visible="0">
+											<ul class="feeds"> 
+												<li>													
 													<div class="col1">
 														<div class="cont">
 															<div class="cont-col1">
@@ -320,37 +320,8 @@
 																</div>
 															</div>
 															<div class="cont-col2">
-																<div class="desc text-danger">
-																	You have 2 critical alerts. 
-																</div>
-															</div>															
-														</div>														
-														<div class="col3"> 
-															<div class="date">
-																<span class="name">Sent: &nbsp;  
-																	<i class="fa fa-comment" style="color:skyblue;"></i>
-																	<i class="fa fa-envelope-o" style="color:skyblue;"></i>  Admin
-																</span>  
-															</div>
-														</div>
-													</div> 
-													<div class="col2"> 
-														<div class="date"> - Just now </div>
-													</div>		
-												</li>
-												
-												<li>
-													
-													<div class="col1">
-														<div class="cont">
-															<div class="cont-col1">
-																<div class="label label-sm label-danger">
-																	<i class="fa fa-bell-o"></i>
-																</div>
-															</div>
-															<div class="cont-col2">
-																<div class="desc text-danger">
-																	Temperature crossing high threshold level in Machine122
+																<div class="desc">
+																	Temperature crossed 200&deg;F on Shot-Blasting Machine in Powder Coating section
 																</div>
 															</div>
 															
@@ -358,7 +329,10 @@
 														
 														<div class="col3"> 
 															<div class="date">															
-																<span class="name">Sent: &nbsp;  <i class="fa fa-comment" style="color:skyblue;"></i><i class="fa fa-envelope-o" style="color:skyblue;"></i>  Admin</span> 
+																<span class="name">Sent by:  
+																	<i class="fa fa-comment text-primary"></i>
+																	<i class="fa fa-envelope-o text-primary"></i>  
+																	 to <b>Admin</b> </span> 
 															</div>
 														</div> 
 													
@@ -366,7 +340,7 @@
 													
 													<div class="col2"> 
 														<div class="date">
-															- 20 mins ago
+															- 1 mins ago
 														</div>
 													</div>
 													
@@ -377,85 +351,31 @@
 														<div class="cont">
 															<div class="cont-col1">
 																<div class="label label-sm label-danger">
-																	<i class="fa fa-bolt"></i>
+																	<i class="fa fa-bell-o"></i>
 																</div>
 															</div>
 															<div class="cont-col2">
-																<div class="desc text-danger">
-																	 Machine232 temperature reaching high
+																<div class="desc">
+																	Vibration crossed 3Hz on Shot-Blasting in Powder Coating section
 																</div>
 															</div>
 														</div>
 														<div class="col3"> 
 															<div class="date">															
-																<span class="name">Sent: &nbsp;  <i class="fa fa-comment" style="color:skyblue;"></i>
-																<i class="fa fa-envelope-o" style="color:skyblue;"></i>  Admin</span> 
+																<span class="name">Sent by: 
+																	<i class="fa fa-comment text-primary"></i>
+																	<i class="fa fa-envelope-o text-primary"></i>  
+																	 to <b>Admin</b> </span> 
 															</div>
 														</div> 
 													</div>
 													<div class="col2">
 														<div class="date">
-															- 24 mins ago
+															- 2 mins ago
 														</div>
 													</div>
 												</li>
-												
-												<li>
-													<div class="col1">
-														<div class="cont">
-															<div class="cont-col1">
-																<div class="label label-sm label-info">
-																	<i class="fa fa-bullhorn"></i>
-																</div>
-															</div>
-															<div class="cont-col2">
-																<div class="desc">
-																	 Vibration overloaded.
-																</div>
-															</div>
-														</div>
-														
-														<div class="col3">
-															<div class="date">
-																<span class="name">Sent: &nbsp;  <i class="fa fa-comment" style="color:skyblue;"></i> Admin</span>  
-															</div>
-														</div>
-													</div>
-													<div class="col2">
-														<div class="date">
-															 - 30 mins ago
-														</div>
-													</div>
-												</li>
-												
-												<li>
-													<div class="col1">
-														<div class="cont">
-															<div class="cont-col1">
-																<div class="label label-sm label-success">
-																	<i class="fa fa-bullhorn"></i>
-																</div>
-															</div>
-															<div class="cont-col2">
-																<div class="desc">
-																	New Temperature Sensorv1 just added! 
-																</div>
-															</div>
-														</div>
-														
-														<div class="col3">
-															<div class="date align-left">
-																<span class="name">Sent: &nbsp;  <i class="fa fa-envelope-o" style="color:skyblue;"></i>  Admin</span> 
-															</div>
-														</div>
-													</div>
-													<div class="col2">
-														<div class="date">
-															- 40 mins ago
-														</div>
-													</div>
-												</li>
-												
+										 	
 												
 											<!-- 	<li>
 													<div class="col1">

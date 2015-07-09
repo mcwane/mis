@@ -140,9 +140,9 @@
 					<a href="report-summary.html"> Reports </a>
 				</li>
 				
-				<li class="classic-menu-dropdown">
+				<!-- <li class="classic-menu-dropdown">
 					<a href="index1.html"> Admin </a>
-				</li>
+				</li> -->
 			 
 			</ul>
 		</div>
@@ -281,12 +281,12 @@
 			<!-- BEGIN PAGE HEADER-->
 			<div class="page-bar">
 			
-				<div class="row" style="padding:8px;">
-					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<div class="row" style="padding:2px;">
+					<!-- <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 				 
 						 <h4 class="block1" style="float:left;"> View: &nbsp;&nbsp;</h4>  
 						 
-						 <div class="btn-group activeall">
+						<div class="btn-group activeall">
 							<button type="button" class="btn btn-sm blue-hoki">All</button>
 							<button type="button" class="btn btn-sm blue-hoki dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-angle-down"></i></button>
 							<div class="dropdown-menu hold-on-click dropdown-radiobuttons" role="menu">
@@ -296,17 +296,17 @@
 						</div>
 						  
 					</div>
+					 -->
 					
 					
-					
-					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 util-btn-margin-bottom-5">
+					<!-- <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 util-btn-margin-bottom-5">
 						 <h4 class="block1" style="float:left;"> Show: &nbsp;&nbsp;</h4>  
-						  <!-- <button type="button" class="btn btn-sm btn-circle green activeall"> All </button>  -->
+						  <!-- <button type="button" class="btn btn-sm btn-circle green activeall"> All </button>   
 						 
-						<button type="button" class="btn btn-sm green-meadow" id="map"> Map </button> 
-						<button type="button" class="btn btn-sm blue-madison" id="grid"> Grid </button> 
+						<!-- <button type="button" class="btn btn-sm green-meadow" id="map"> Map </button>  
+						<button type="button" class="btn btn-sm blue-madison" id="grid"> Grid </button>  
 						
-					</div>
+					</div> -->
 					
 					
 					
@@ -319,14 +319,33 @@
 					</div> 
 					-->
 					 
-					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 util-btn-margin-bottom-5">
+					<div class="col-lg-4 col-md-5 col-sm-8 col-xs-12" style="float:right;">
 						<h4 class="block1" style="float:left;"> Filter: &nbsp;&nbsp;</h4>  
 						  <!-- <button type="button" class="btn btn-sm btn-circle green activeall"> All </button>  -->
-						
-						<button type="button" class="btn btn-sm green-meadow activegreen"> Healthy </button>
-						<button type="button" class="btn btn-sm red-sunglo abnormalred"> Abnormal </button>						
-						<button type="button" class="btn btn-sm grey-cascade inactivegrey"> Inactive </button>
-													
+						<div style="margin-top:3px;">
+							<div class="btn-group btn-group-sm" data-toggle="buttons" style="margin-right:20px;">
+								<label class="btn btn-default blue-hoki active">
+								<input type="radio" class="toggle"> Show All </label>
+								<label class="btn btn-default blue-hoki">
+								<input type="radio" class="toggle"> Temperature </label>
+								<label class="btn btn-default blue-hoki">
+								<input type="radio" class="toggle"> Vibration </label>
+								
+							</div>
+							
+							<!-- <div class="btn-group activeall">
+								<button type="button" class="btn btn-sm blue-hoki">Show All</button>
+								<button type="button" class="btn btn-sm blue-hoki dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-angle-down"></i></button>
+								<div class="dropdown-menu hold-on-click dropdown-radiobuttons" role="menu">
+									<label> <input type="checkbox" id="inlineCheckbox1" value="option1" checked> Temperature</label>
+									<label> <input type="checkbox" id="inlineCheckbox2" value="option2" checked> Vibration</label> 
+								</div>
+							</div> -->
+							
+							<button type="button" class="btn btn-sm green-meadow activegreen"> Healthy </button>
+							<button type="button" class="btn btn-sm red-sunglo abnormalred"> Abnormal </button>						
+							<button type="button" class="btn btn-sm grey-cascade inactivegrey"> Inactive </button>
+						</div>							
 					<!-- 	<button type="button" class="btn btn-sm btn-circle red abnormalred"> Abnormal </button> 
 						<button type="button" class="btn btn-sm btn-circle green activegreen"> Healthy </button>
 						<button type="button" class="btn btn-sm btn-circle grey inactivegrey"> Inactive </button>  -->
@@ -350,14 +369,14 @@
 							<div class="hideonadd"> 
 							<div class="col-md-12">
 								
-								<div id="state" class="redmarker ">
+								<!-- <div id="state" class="redmarker ">
 								<img src="assets/admin/layout/img/red-marker.png" alt="maine_state" class="realmap" /> 
 								<div class="gps_ring"></div>
 								</div>				
 
 
 								<div  style="background:url('assets/admin/layout/img/map-2.jpg') top center no-repeat ; height:550px; width:100%;position: relative; " class="img-responsive"></div>	  
-								
+								 -->
 							 
 							<!-- BEGIN EXAMPLE TABLE PORTLET-->
 							<!-- <div class="portlet box blue-hoki">
@@ -595,28 +614,28 @@
 					</div>
 				
 				
-						<div id="state" class="orangemarker1 redmarker">
+						<!-- <div id="state" class="orangemarker1 redmarker">
 							<img src="assets/admin/layout/img/orange-marker.png" alt="maine_state" class="realmap popover-btn6" /> 
 							<div class="gps_ring"></div>
 						</div>
-						<!-- <img src="assets/admin/layout/img/orange-marker.png" class="orangemarker1 popover-btn3"> -->
+						<!-- <img src="assets/admin/layout/img/orange-marker.png" class="orangemarker1 popover-btn3"> 
 						
 						<div id="state" class="redmarker1 redmarker">
 							<img src="assets/admin/layout/img/red-marker.png" alt="maine_state" class="realmap popover-btn4" /> 
 							<div class="gps_ring"></div>
 						</div>
-						<!-- <img src="assets/admin/layout/img/red-marker.png" class="redmarker1 popover-btn1"> -->
+						<!-- <img src="assets/admin/layout/img/red-marker.png" class="redmarker1 popover-btn1"> 
 						
 						<div id="state" class="greenmarker1 redmarker">
 							<img src="assets/admin/layout/img/green-marker.png" alt="maine_state" class="realmap popover-btn5" /> 
 							<div class="gps_ring"></div>
 						</div>
-						<!-- <img src="assets/admin/layout/img/green-marker.png" class="greenmarker1 popover-btn2"> -->
+						<!-- <img src="assets/admin/layout/img/green-marker.png" class="greenmarker1 popover-btn2"> 
 						
 						
 						<div  style="background:url('assets/admin/layout/img/Plan.jpg') top center no-repeat ; height:550px; width:100%; position: relative;" class="img-responsive"></div>		
 
-					 
+					  -->
 					 
 				</div> 
 					<!-- END EXAMPLE TABLE PORTLET-->
@@ -2304,8 +2323,8 @@
 	<script>
 			jQuery(document).ready(function() {
 			
-			$('#gridview').hide();
-			$('#mapview').show();
+			$('#gridview').show();
+			$('#mapview').hide();
 			
 				
 			$('#map').click(function(){

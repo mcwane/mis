@@ -48,8 +48,12 @@ var ComponentsDropdowns = function () {
             }
         });
 
-        $("#select2_sample5").select2({
-            tags: ["TEMP_225", "TEMP_226", "TEMP_227", "VIBR_320", "VIBR_327"]
+        $("#select2_temps").select2({
+            tags: ["TEMP_225", "TEMP_226", "TEMP_227", "TEMP_320", "TEMP_327"]
+        });
+		
+		 $("#select2_vibra").select2({
+            tags: ["VIBR_225", "VIBR_226", "VIBR_227", "VIBR_320", "VIBR_327"]
         });
 
 		$("#select2_sensor").select2({

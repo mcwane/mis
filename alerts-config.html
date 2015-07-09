@@ -153,10 +153,10 @@
 					<a href="report-summary.html"> Reports </a>
 				</li>
 				
-				<li class="classic-menu-dropdown">
+			<!-- 	<li class="classic-menu-dropdown">
 					<a href="index1.html"> Admin </a>
 				</li>
-			
+			 -->
 			
 			</ul>
 		</div>
@@ -303,13 +303,8 @@
 									<div class="col-md-8">
 										<select id="select11" class="form-control input-sm thresholds">
 												<option value="temperature">Temperature</option>
-												<option value="vibration">Vibration</option>
-												<option value="humidity">Humidity</option>
-												<option value="airflow">Air Flow</option>
-												<option value="pressure">Pressure</option>
-												<option value="pressure">Other</option>
-										</select>
-										 
+												<option value="vibration">Vibration</option>											
+										</select>										 
 									</div>
 								</div>
 								 
@@ -319,17 +314,22 @@
 											<label for="notifyif" class="col-md-3 control-label">Select Sensor</label>
 										 
 											<div class="col-md-8">
-												<input type="hidden" id="select2_sample5" class="form-control select2" value="TEMP_220">
+												<!-- <input type="hidden" id="select2_temps" class="form-control select2" value="TEMP_220" /> -->
+												<select class="form-control">
+													<option>TEMP_220</option>
+													<option>TEMP_221</option>
+													<option>TEMP_222</option>
+													<option>TEMP_223</option>
+													<option>TEMP_224</option>
+												</select>
 											</div>
 									</div>
 									 
 									<div class="form-group">
-										<label class="col-md-3 control-label"> Thresholds(&deg;F) </label>
-										<div class="col-md-4">
+										<label class="col-md-3 control-label"> Threshold </label>
+										<div class="col-md-6">
 											<div id="temp-range" class="slider bg-blue-hoki"></div>
-											<div>
-												 Value: <span id="slider-range-temp"></span>
-											</div>
+											<!-- <div> Value: <span id="slider-range-temp"></span> </div> -->
 										</div>
 									</div>
 									 
@@ -340,39 +340,33 @@
 											<table class="table table-bordered">
 											  <thead>
 												  <tr>
-														<td> Less than 45&deg;F </td>
+														<td> Less than <span id="temp-rangefrom"></span> </td>
 														<td> 
-														 
-														 <label id="message-numadd" class="checkbox inline bold popover-btn">															 
-															<i class="fa fa-comment-o"></i> <span style="text-decoration: underline;">Message</span>
-														  </label>														 
- 
+														 <label id="message-numadd" class="checkbox inline popover-btn">															 
+															<i class="fa fa-comment text-primary"></i> <span class="text-primary" style="text-decoration: underline; cursor: pointer;">Message</span>
+														  </label>	
 														</td>
 														
 														
 														<td> 
-														  <label class="checkbox inline bold popover-btn1"> 
-															<i class="fa fa-envelope-o"></i> <span style="text-decoration: underline;">Email</span>
-														  </label>
-														   
+														  <label class="checkbox inline popover-btn1"> 
+															<i class="fa fa-envelope text-primary"></i> <span class="text-primary" style="text-decoration: underline; cursor: pointer;">Email</span>
+														  </label>														   
 														</td>											   
 												  </tr>
 											  </thead>   
 											  <tbody>
 												<tr>
-													<td> Greater than 150&deg;F </td>
+													<td> Greater than <span id="temp-rangeto"></span> </td>
 													<td>
-														  <label class="checkbox inline bold">
-															<!-- <input type="checkbox" id="inlineCheckbox1" value="option21">  -->
-															<i class="fa fa-comment-o"></i> Message
+														  <label id="message-numadd" class="checkbox inline popover-btn">															 
+															<i class="fa fa-comment text-primary"></i> <span class="text-primary" style="text-decoration: underline; cursor: pointer;">Message</span>
 														  </label>														   
 													</td>
 													<td> 
-														  <label class="checkbox inline bold">
-															<!-- <input type="checkbox" id="inlineCheckbox2" value="option22">  -->
-															<i class="fa fa-envelope-o"></i> Email
-														  </label>
-														  
+														  <label class="checkbox inline popover-btn1"> 
+															<i class="fa fa-envelope text-primary"></i> <span class="text-primary" style="text-decoration: underline; cursor: pointer;">Email</span>
+														  </label>	
 													</td>											 
 												</tr>
 											  </tbody>
@@ -391,15 +385,22 @@
 											<label for="notifyif" class="col-md-3 control-label">Select Sensor</label>
 										 
 											<div class="col-md-8">
-												<input type="hidden" id="select2_sample5" class="form-control select2" value="VIBR_220, VIBR_222">
+												<!-- <input type="hidden" id="select2_vibra" class="form-control select2" value="VIBR_220, VIBR_222" /> -->
+												<select class="form-control">
+													<option>VIBR_320</option>
+													<option>VIBR_321</option>
+													<option>VIBR_322</option>
+													<option>VIBR_323</option>
+													<option>VIBR_324</option>
+												</select>
 											</div>
 									</div>
 										
 									<div class="form-group">
-										<label for="range" class="col-md-3 control-label"> Vibration Range(kHz) </label>
+										<label for="range" class="col-md-3 control-label"> Threshold </label>
 										<div class="col-md-8">
-											<input id="range_vibr" type="text" name="range_1" value=""/>
-											<!-- <div class="field_notice"> <span class="must sliderRangeLabel"> 25&deg;C - 120&deg;C </span> </div> -->
+											<div id="vibr-range" class="slider bg-blue-hoki"></div> 
+											<!-- <div> Value: <span id="slider-range-vibr"></span> </div> -->
 										</div>
 									</div>
 									 
@@ -410,29 +411,32 @@
 											<table class="table table-bordered">
 											  <thead>
 												  <tr>
-													  <td> Less than 5kHz </td>
-													  <td> <label class="checkbox inline">
-															<input type="checkbox" id="inlineCheckbox1" value="option1"> 
-															<i class="fa fa-comment" style="color:skyblue;"></i> Message
-														  </label>
-														  <label class="checkbox inline">
-															<input type="checkbox" id="inlineCheckbox2" value="option2"> 
-															<i class="fa fa-envelope-o" style="color:skyblue;"></i> Email
-														  </label></td>											   
+														<td> Less than <span id="vibr-rangefrom"></span> </td>
+														<td>  
+														 <label id="message-numadd" class="checkbox inline popover-btn">															 
+															<i class="fa fa-comment text-primary"></i> <span class="text-primary" style="text-decoration: underline; cursor: pointer;">Message</span>
+														  </label>														 
+														</td>
+														 
+														<td> 
+														  <label class="checkbox inline popover-btn1"> 
+															<i class="fa fa-envelope text-primary"></i> <span class="text-primary" style="text-decoration: underline; cursor: pointer;">Email</span>
+														  </label> 
+														</td>									   
 												  </tr>
 											  </thead>   
 											  <tbody>
 												<tr>
-													<td> Greater than 60kHz </td>
+													<td> Greater than <span id="vibr-rangeto"></span> </td>
 													<td>
-														  <label class="checkbox inline">
-															<input type="checkbox" id="inlineCheckbox1" value="option21"> 
-															<i class="fa fa-comment" style="color:skyblue;"></i> Message
-														  </label>
-														  <label class="checkbox inline">
-															<input type="checkbox" id="inlineCheckbox2" value="option22"> 
-															<i class="fa fa-envelope-o" style="color:skyblue;"></i> Email
-														  </label>
+														  <label id="message-numadd" class="checkbox inline popover-btn">															 
+															<i class="fa fa-comment text-primary"></i> <span class="text-primary" style="text-decoration: underline; cursor: pointer;">Message</span>
+														  </label>														   
+													</td>
+													<td> 
+														  <label class="checkbox inline popover-btn1"> 
+															<i class="fa fa-envelope text-primary"></i> <span class="text-primary" style="text-decoration: underline; cursor: pointer;">Email</span>
+														  </label> 													  
 													</td>											 
 												</tr>
 											  </tbody>
@@ -455,7 +459,7 @@
 							 
 						</div>
 						<div class="modal-footer">
-							<button type="button" id="alert-save" class="btn blue">Save Changes</button>
+							<button type="button" id="alert-save" class="btn blue" data-dismiss="modal">Save Changes</button>
 							<button type="button" class="btn default" data-dismiss="modal">Cancel</button>
 						</div>
 					</div>
@@ -472,13 +476,13 @@
 					<div class="portlet box blue-hoki no-space">
 						<div class="portlet-title">
 							<div class="caption">
-								<input type="text" style="width:160px; margin-right:10px; " /> 
+								<input type="text" style="width:190px; margin-right:10px; " /> 
 							</div>
 							<div class="actions">
 								<!-- <a href="#" class="btn btn-default btn-sm">
 								<i class="fa fa-pencil"></i> Edit </a> -->
-								<a href="#" class="btn btn-default btn-sm" style="margin-top:4px; height:25px;">
-								<i class="fa fa-plus"></i> Add </a>
+								<a href="#" class="btn btn-info btn-sm" style="margin-top:4px; height:25px;">
+								<i class="fa fa-plus"></i> </a>
 							</div>
 						</div>
 						<div class="portlet-body no-space">
@@ -513,13 +517,13 @@
 					<div class="portlet box blue-hoki no-space">
 						<div class="portlet-title">
 							<div class="caption">
-								<input type="text" style="width:160px; margin-right:10px; " /> 
+								<input type="text" style="width:190px; margin-right:10px; " /> 
 							</div>
 							<div class="actions">
 								<!-- <a href="#" class="btn btn-default btn-sm">
 								<i class="fa fa-pencil"></i> Edit </a> -->
 								<a href="#" class="btn btn-info btn-sm" style="margin-top:4px; height:25px;">
-								<i class="fa fa-plus"></i> Add </a>
+								<i class="fa fa-plus"></i> </a>
 							</div>
 						</div>
 						<div class="portlet-body no-space">
@@ -550,9 +554,9 @@
 			
 			 
 			 
-	 <h3 class="page-title"> Alert Summary </h3>
+	<!-- <h3 class="page-title"> Alert Summary </h3>
 	 		
-			<div class="page-bar">
+			 <div class="page-bar">
 				<ul class="page-breadcrumb">
 					<li>
 						<i class="fa fa-home"></i>
@@ -565,11 +569,11 @@
 					 
 				</ul>
 				 
-			</div>
+			</div> -->
 			<!-- END PAGE HEADER-->
 			 
 			<!-- BEGIN PAGE CONTENT-->
-			<div class="row margin-top-20">
+			<div class="row">
 				<div class="col-md-12">
 		 
 				<div class="row hideonadd">
@@ -599,20 +603,15 @@
 					<table class="table table-striped table-bordered table-hover" id="sample_1">
 						<thead>
 							<tr> 
-								<th> Alert Name </th>
-								<th> Type </th>
-								<th colspan="2"> Threshold Values </th>
-								<th> Notifications Type </th>								 
-								<th> Actions </th>
+								<th rowspan="2" class="align-top"> Alert Name </th>
+								<th rowspan="2"> Type </th>
+								<th colspan="2"> Thresholds</th>
+								<th rowspan="2"> Notification Types</th>								 
+								<th rowspan="2"> Actions </th>
 							</tr>
-							 <tr>
-								  <th> </th>
-								  <th> </th>
+							 <tr> 
 								  <th>Low</th>
-								  <th>High</th>
-								   
-								  <th> </th>
-								  <th> </th>
+								  <th>High</th>								   
 							  </tr>
 						</thead>
 						<tbody>
@@ -623,59 +622,60 @@
 								<td class="center">0.0</td>
 								<td class="center">3.0</td>
 								<td class="center">
-									 <i class="fa fa-comment text-primary"></i> &nbsp;&nbsp; 
-									 <i class="fa fa-envelope-o text-primary"></i> 
+									<i class="fa fa-comment text-primary tooltips" data-container="body" data-placement="top" data-original-title="Message Notifications Added"></i> &nbsp;&nbsp;
+									<i class="fa fa-envelope-o text-primary tooltips" data-container="body" data-placement="top" data-original-title="Mail Notifications Added"></i> 
 								</td>
 								<!-- <td class="center"> <span class="label label-success"> Active </span> </td> -->
 								<td class="center">
-									<button class="btn btn-sm btn-primary"> <i class="fa fa-edit"></i></button>
-									<button class="btn btn-sm btn-danger"> <i class="fa fa-trash-o"></i> </button>
+									<button class="btn btn-sm btn-primary" title="Edit Record"> <i class="fa fa-edit"></i></button>
+									<button class="btn btn-sm btn-danger" title="Delete Record"> <i class="fa fa-trash-o"></i> </button>
 								</td>
 							</tr>
-							<tr class="odd gradeX">
+							<!-- <tr class="odd gradeX">
 								<td>PRESRE_5011</td>
 								<td class="center">Pressure Sensor</td>
 								<td class="center">120</td>
 								<td class="center">280</td>
 								<td class="center">								 
-									<i class="fa fa-comment text-primary"></i> 
+									<i class="fa fa-comment text-primary tooltips" data-container="body" data-placement="top" data-original-title="Message Notifications Added"></i>  
 								</td>
-								<!-- <td class="center"> <span class="label label-info"> Suppress </span> </td> -->
+								 
 								<td class="center">
-									<button class="btn btn-sm btn-primary"> <i class="fa fa-edit"></i></button>
-									<button class="btn btn-sm btn-danger"> <i class="fa fa-trash-o"></i> </button>
+									<button class="btn btn-sm btn-primary" title="Edit Record"> <i class="fa fa-edit"></i></button>
+									<button class="btn btn-sm btn-danger" title="Delete Record"> <i class="fa fa-trash-o"></i> </button>
 								</td>
-							</tr>
+							</tr> -->
 							<tr class="odd gradeX">
 								<td>TEMP_225</td>
 								<td class="center">Temperature Sensor</td>
 								<td class="center">65</td>
 								<td class="center">220</td>
 								<td class="center">									 
-									 <i class="fa fa-envelope-o text-primary"></i> 
+									<i class="fa fa-comment text-primary tooltips" data-container="body" data-placement="top" data-original-title="Message Notifications Added"></i> &nbsp;&nbsp;
+									<i class="fa fa-envelope-o text-primary tooltips" data-container="body" data-placement="top" data-original-title="Mail Notifications Added"></i> 
 								</td>
 								<!-- <td class="center"> <span class="label label-danger"> Inactive </span> </td> -->
 								<td class="center">
-									<button class="btn btn-sm btn-primary"> <i class="fa fa-edit"></i></button>
-									<button class="btn btn-sm btn-danger"> <i class="fa fa-trash-o"></i> </button>
+									<button class="btn btn-sm btn-primary" title="Edit Record"> <i class="fa fa-edit"></i></button>
+									<button class="btn btn-sm btn-danger" title="Delete Record"> <i class="fa fa-trash-o"></i> </button>
 								</td>
 							</tr>
 							
-							<tr class="odd gradeX">
+							<!-- <tr class="odd gradeX">
 								<td>VIBR_1022</td>
 								<td class="center">Vibration Sensor</td>
 								<td class="center">0.1</td>
 								<td class="center">2.0</td>
-								<td class="center">
-									 <i class="fa fa-comment text-primary"></i> &nbsp;&nbsp;
-									 <i class="fa fa-envelope-o text-primary"></i> 
+								<td class="center"> 
+									 <i class="fa fa-comment text-primary tooltips" data-container="body" data-placement="top" data-original-title="Message Notifications Added"></i> &nbsp;&nbsp;
+									 <i class="fa fa-envelope-o text-primary tooltips" data-container="body" data-placement="top" data-original-title="Mail Notifications Added"></i> 
 								</td>
-								<!-- <td class="center"> <span class="label label-success"> Active </span> </td> -->
+								<!-- <td class="center"> <span class="label label-success"> Active </span> </td>  
 								<td class="center">
-									<button class="btn btn-sm btn-primary"> <i class="fa fa-edit"></i></button>
-									<button class="btn btn-sm btn-danger"> <i class="fa fa-trash-o"></i> </button>
+									<button class="btn btn-sm btn-primary" title="Edit Record"> <i class="fa fa-edit"></i></button>
+									<button class="btn btn-sm btn-danger" title="Delete Record"> <i class="fa fa-trash-o"></i> </button>
 								</td>
-							</tr>
+							</tr> -->
 							 
 							</tbody>
 						</table>
@@ -763,6 +763,9 @@
 	<script>
 	jQuery(document).ready(function() {
 	 
+	 
+
+	 
 				$('.newphone').hide();
 				$( ".addbtn" ).click(function() {
 				  $('.hideflag1').show();
@@ -800,15 +803,28 @@
 				$('.popover-btn1').popover(options2); 
 				
 				
+				$('body').on('click', function (e) {
+					$('[data-toggle="popover"]').each(function () {
+						//the 'is' for buttons that trigger popups
+						//the 'has' for icons within a button that triggers a popup
+						if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+							$(this).popover('hide');
+						}
+					});
+				});
+				
 				$("select.thresholds").change(function(){
 					$( "select option:selected").each(function(){
 						if($(this).attr("value")=="temperature"){
 							$(".thresholds-box").hide();
 							$(".temp-control").show();
 						}
-						 
+						if($(this).attr("value")=="vibration"){
+							$(".thresholds-box").hide();
+							$(".vibra-control").show();
+						} 
 					});
-				}).change();
+				}).change(); 
 		
 		
 	
