@@ -2106,7 +2106,7 @@ System feeds
 
 .feeds li .col3 {
   float: right;
-  width: 250px;
+  width: 220px;
   margin-right: 15%;
 }
 .feeds li .col3 > .date {
@@ -7159,7 +7159,7 @@ Green Meadow
 
 .green-meadow.btn:focus { 
   font-weight:bold;
-  background-color: #d6d6d6;  /* #13866f */
+  background-color: #13866f;  /* #13866f */
 }
 
 .green-meadow.btn:active, .green-meadow.btn.active {
@@ -9751,7 +9751,7 @@ Red Sunglo
 
 .red-sunglo.btn:focus { 
   font-weight:bold;
-  background-color: #d6d6d6;  /* b33f24 */
+  background-color: #b33f24;  /* d6d6d6 */
 }
 
 .open .red-sunglo.btn.dropdown-toggle {
