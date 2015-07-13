@@ -179,9 +179,9 @@
 				<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
 				<li class="dropdown1 dropdown-user">
 					<a href="login.html" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-					<img alt="" class="img-circle" src="assets/admin/layout/img/avatar.png"/>
-					<span onclick="document.location.href='index.html';" class="username username-hide-on-mobile"> Logout </span>
-					<!-- <i class="fa fa-angle-down"></i> -->
+						<img alt="" class="img-circle" src="assets/admin/layout/img/avatar.png"/>
+						<span onclick="document.location.href='index.html';" class="username username-hide-on-mobile"> Logout </span>
+						<!-- <i class="fa fa-angle-down"></i> -->
 					</a>
 				 
 				</li>
@@ -261,7 +261,7 @@
 							<h4 class="modal-title">Modal title</h4>
 						</div>
 						<div class="modal-body">
-							 Widget settings form goes here
+							Widget settings form goes here
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn blue">Save changes</button>
@@ -289,9 +289,9 @@
 								<h4 class="block1 bold" style="float:left; margin-top:5px;"> Sensors: &nbsp;&nbsp;  </h4>   				  
 											 
 								<div class="btn-group1" data-toggle="buttons"> 
-									<label class="btn btn-sm btn-primary" id="showtemp">
+									<label class="btn btn-xs btn-primary" id="showtemp">
 									<input type="checkbox" class="toggle"> Temperature </label>
-									<label class="btn btn-sm btn-primary" id="vibration">
+									<label class="btn btn-xs btn-primary" id="vibration">
 									<input type="checkbox" class="toggle" id="testvib"> Vibration </label>
 								</div>	
 							</div>
@@ -299,9 +299,22 @@
 							<div style="margin-top:3px;">	 			
 								<h4 class="block1 bold" style="float:left; margin-top:5px;"> Status: &nbsp;&nbsp;  </h4> 
 								
-									<button type="button" class="btn btn-sm green-meadow activegreen"> Healthy </button>
-									<button type="button" class="btn btn-sm red-sunglo abnormalred"> Abnormal </button>						
-									<button type="button" class="btn btn-sm grey-cascade inactivegrey"> Inactive </button>
+									<!-- 
+										<button type="button" class="btn btn-sm green activegreen"> Healthy </button>
+										<button type="button" class="btn btn-sm red abnormalred"> Abnormal </button>						
+										<button type="button" class="btn btn-sm grey inactivegrey"> Inactive </button>
+									 -->
+									
+									<div class="btn-group1 btn-group-circle" data-toggle="buttons">
+										<label class="btn btn-xs green" id="healthyitems">
+										<input type="checkbox" class="toggle"> Healthy </label>
+										
+										<label class="btn btn-xs red" id="abnormalitems" >
+										<input type="checkbox" class="toggle"> Abnormal </label>	
+
+										<label class="btn btn-xs grey" id="inactiveitems" >
+										<input type="checkbox" class="toggle"> Inactive </label>											
+									</div>
 									
 								</div>
 							 
@@ -336,19 +349,20 @@
 								<div  style="background:url('assets/admin/layout/img/map-2.jpg') top center no-repeat ; height:550px; width:100%;position: relative; " class="img-responsive"></div>	  
 								 -->
 							 
-							<!-- BEGIN EXAMPLE TABLE PORTLET-->
-							<!-- <div class="portlet box blue-hoki">
-							<div class="portlet-title">
-							<div class="caption">
-							<i class="fa fa-globe"></i> Map View
-							</div>
-							</div>
+								<!-- BEGIN EXAMPLE TABLE PORTLET-->
+								<!-- <div class="portlet box blue-hoki">
+								<div class="portlet-title">
+								<div class="caption">
+								<i class="fa fa-globe"></i> Map View
+								</div>
+								</div>
 
 
-							<div class="portlet-body">	 
-							</div>
+								<div class="portlet-body">	 
+								</div>
 
-							</div> -->
+								</div> -->
+								
 							</div></div>
 							<!-- END EXAMPLE TABLE PORTLET-->
 						 
@@ -634,12 +648,10 @@
 												<ul class="nav nav-tabs">
 													 
 													<li class="active">
-														<a href="#portlet_tab2" data-toggle="tab">
-														Details</a>
+														<a href="#portlet_tab2" data-toggle="tab"> Details</a>
 													</li>
 													<li>
-														<a href="#portlet_tab1" data-toggle="tab">
-														Notifications </a>
+														<a href="#portlet_tab1" data-toggle="tab"> Notifications </a>
 													</li>
 												</ul>
 											</div>
@@ -724,7 +736,9 @@
 																 
 																	<td class="text-primary bold">Location / Area</td>
 																	<td class="center">Casting Block Yard-2</td>
-																</tr><tr>		
+																</tr>
+																
+																<tr>		
 																	<td class="text-primary bold">Power Type</td> 
 																	<td class="center">AC : 100-330 Kv</td> 
 																	
@@ -889,16 +903,18 @@
 										<div class="actions">
 											<div class="btn-group btn-group-devided" data-toggle="buttons">
 												
-												<!-- <label class="btn btn-transparent red-thunderbird btn-circle btn-sm active" id="current2">
+												<!-- 
+													<label class="btn btn-transparent red-thunderbird btn-circle btn-sm active" id="current2">
 													 <input type="radio" name="history-opt1" class="toggle" id="" value="current2">Current</label> 
-													 <label class="btn btn-transparent red-thunderbird btn-circle btn-sm" id="history2">
+													
+													<label class="btn btn-transparent red-thunderbird btn-circle btn-sm" id="history2">
 													 <input type="radio" name="history-opt1" class="toggle" id="" value="history2">History</label>  
 												 -->
 												 
 												<div class="btn-group btn-group-circle" data-toggle="buttons">
 													<label class="btn btn-xs red-thunderbird active" id="current2">
 													<input type="radio" class="toggle"> Current </label>
-													<label class="btn btn-xs red-thunderbird" id="history2" >
+													<label class="btn btn-xs red-thunderbird" id="history2">
 													<input type="radio" class="toggle"> History </label>													 
 												</div>
 												
@@ -916,7 +932,7 @@
 													<tbody>
 														<tr>
 															<td>
-																<img src="assets/admin/layout/img/sl30.jpg" class="img-responsive" alt="logo" /> 
+																<img src="assets/admin/layout/img/sl30.jpg" class="img-responsive" style="max-width:150px;" alt="logo" /> 
 															</td>															
 															<td style="width:30%; border-left:1px solid #ddd;" class="temperature"> 
 																	<div class="stat-left box blue">
@@ -1067,7 +1083,7 @@
 													<tbody>
 														<tr>
 															<td style="width:100px;">
-																<img src="assets/admin/layout/img/mac3.jpg" class="img-responsive" alt="logo" /> 
+																<img src="assets/admin/layout/img/mac3.jpg" class="img-responsive" style="max-width:150px;" alt="logo" /> 
 															</td>
 															
 															<td style="width:30%; border-left:1px solid #ddd;" class="temperature"><!--  style="background-color: #ffHzd6" -->
@@ -1224,7 +1240,7 @@
 													<tbody>
 														<tr>
 															<td>
-																<img src="assets/admin/layout/img/sl30.jpg" class="img-responsive" alt="logo" /> 
+																<img src="assets/admin/layout/img/sl30.jpg" class="img-responsive" style="max-width:150px;" alt="logo" /> 
 															</td>
 															
 															<td style="width:30%; border-left:1px solid #ddd;" class="temperature"><!--  style="background-color: #ffHzd6" -->
@@ -1382,7 +1398,7 @@
 													<tbody>
 														<tr>
 															<td>
-																<img src="assets/admin/layout/img/mac3.jpg" class="img-responsive" alt="logo" /> 
+																<img src="assets/admin/layout/img/mac3.jpg" class="img-responsive" style="max-width:150px;" alt="logo" /> 
 															</td>
 															
 															<td style="width:30%; border-left:1px solid #ddd;" class="temperature"><!--  style="background-color: #ffHzd6" -->
@@ -1544,7 +1560,7 @@
 													<tbody>
 														<tr>
 															<td>
-																<img src="assets/admin/layout/img/sl30.jpg" class="img-responsive" alt="logo" /> 
+																<img src="assets/admin/layout/img/sl30.jpg" class="img-responsive" style="max-width:150px;" alt="logo" /> 
 															</td>
 															
 															<td style="width:30%; border-left:1px solid #ddd;" class="temperature"><!--  style="background-color: #ffHzd6" -->
@@ -1702,7 +1718,7 @@
 													<tbody>
 														<tr>
 															<td>
-																<img src="assets/admin/layout/img/sl30.jpg" class="img-responsive" alt="logo" /> 
+																<img src="assets/admin/layout/img/sl30.jpg" class="img-responsive" style="max-width:150px;" alt="logo" /> 
 															</td>
 															
 															<td style="width:30%; border-left:1px solid #ddd;" class="temperature"><!--  style="background-color: #ffHzd6" -->
@@ -1855,7 +1871,7 @@
 													<tbody>
 														<tr>
 															<td>
-																<img src="assets/admin/layout/img/mac2.jpg" class="img-responsive" alt="logo" /> 
+																<img src="assets/admin/layout/img/mac2.jpg" class="img-responsive" style="max-width:150px;" alt="logo" /> 
 															</td>															
 															<td style="width:30%; border-left:1px solid #ddd;" class="temperature"> 
 																	<div class="stat-left box blue">
@@ -1998,7 +2014,7 @@
 													<tbody>
 														<tr>
 															<td>
-																<img src="assets/admin/layout/img/mac2.jpg" class="img-responsive" alt="logo" 
+																<img src="assets/admin/layout/img/mac2.jpg" class="img-responsive" style="max-width:150px;" alt="logo" 
 																	style="opacity:0.4" /> 
 															</td>															
 															<td style="width:30%; border-left:1px solid #ddd;" class="temperature"> 
@@ -2379,42 +2395,6 @@
 			
 			
 			
-			// to hide all history blocks
-			$('#history-block1').hide();
-			$('#history-block2').hide();
-			$('#history-block3').hide();
-			$('#history-block4').hide();
-			$('#history-block5').hide();
-			$('#history-block6').hide();
-			$('#history-block7').hide();
-			$('#history-block8').hide();
-			
-			
-			$('.activegreen').click(function(){
-				//$('.inactivemachine').toggle(300);
-				//$('.abnormalmachine').toggle(300);
-				$('.activemachine').toggle(300);
-			});
-			
-			$('.abnormalred').click(function(){
-				$('.abnormalmachine').toggle(300);
-				// $('.activemachine').toggle(300);
-				// $('.inactivemachine').toggle(300);
-			});
-			
-			$('.inactivegrey').click(function(){
-				$('.inactivemachine').toggle(300);
-				// $('.activemachine').show(300);
-				// $('.abnormalmachine').show(300);
-			});
-			
-			$('.activeall').click(function(){
-				$('.inactivemachine').show(300);
-				$('.activemachine').show(300);
-				$('.abnormalmachine').show(300);
-			});
-			
-			
 				// control for history1 blocks
 					$("#current1").click(function(){
 						$('#history-block1').hide();
@@ -2479,6 +2459,63 @@
 						$('#history-block8').show();
 					});
 
+			
+			// to hide all history blocks
+			$('#history-block1').hide();
+			$('#history-block2').hide();
+			$('#history-block3').hide();
+			$('#history-block4').hide();
+			$('#history-block5').hide();
+			$('#history-block6').hide();
+			$('#history-block7').hide();
+			$('#history-block8').hide();
+			
+			
+			$('#healthyitems').click(function(){
+				$('.activemachine').toggle(200);
+				 
+				 if($('.activemachine').css('display') == 'none'){ 
+					$('#abnormalitems').attr("disabled",true);
+					$('#inactiveitems').attr("disabled",true);
+				}
+				else if($('.activemachine').css('display') == 'block'){
+					$('#abnormalitems').attr("disabled",false);
+					$('#inactiveitems').attr("disabled",false);
+				}
+			
+				
+			});
+			
+			
+			$('#abnormalitems').click(function(){
+				$('.abnormalmachine').toggle(200);
+				
+				if($('.abnormalmachine').css('display') == 'none'){ 
+					$('#healthyitems').attr("disabled",true);
+					$('#inactiveitems').attr("disabled",true);
+				}
+				else{
+					$('#healthyitems').attr("disabled",false);
+					$('#inactiveitems').attr("disabled",false);
+				}
+					   
+			});
+			
+			$('#inactiveitems').click(function(){
+				$('.inactivemachine').toggle(200);
+				
+				if($('.inactivemachine').css('display') == 'none'){ 
+					$('#healthyitems').attr("disabled",true);
+					$('#abnormalitems').attr("disabled",true);
+				}
+				else{
+					$('#healthyitems').attr("disabled",false);
+					$('#abnormalitems').attr("disabled",false);
+				}
+					   
+			});
+			 
+			
 			
 			   // initiate layout and plugins
 			   Metronic.init(); // init metronic core components

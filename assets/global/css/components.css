@@ -119,7 +119,7 @@ h4,
 h5,
 h6 {
   font-family: "Open Sans", sans-serif;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 h1 {
@@ -144,6 +144,10 @@ h5 {
 
 h6 {
   font-size: 12px;
+}
+
+.title h4 { 
+	color: #666666;
 }
 
 /* Headings helper text */
@@ -667,7 +671,7 @@ Number & Chart Stats
   color: #B8C3C7;
 }
 .number-stats .stat-number .number {
-  font-size: 25px;
+  font-size: 28px;
   line-height: 27px;
  /*  color: #7D8C9D; */
 }
@@ -9746,17 +9750,17 @@ Red Sunglo
 }
 .red-sunglo.btn:hover, .red-sunglo.btn:focus, .red-sunglo.btn:active, .red-sunglo.btn.active {
   color: #FFFFFF;
- /*  background-color: #E26A6A;  */
+  background-color: #dc4c4c; 
 }
 
 .red-sunglo.btn:focus { 
   font-weight:bold;
-  background-color: #b33f24;  /* d6d6d6 */
+  background-color: #dc4c4c;  /* d6d6d6 */
 }
 
 .open .red-sunglo.btn.dropdown-toggle {
   color: #FFFFFF;
-  background-color: #E26A6A;
+  background-color: #dc4c4c;
 }
 /* .red-sunglo.btn:active, .red-sunglo.btn.active {
   background-image: none;

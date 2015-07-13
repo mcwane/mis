@@ -24,7 +24,7 @@ var ComponentsjQueryUISliders = function () {
 				min: 0,
                 max: 300,
                 step: 5,
-                values: [45, 120],
+                values: [120, 230],
                 slide: function (event, ui) {
                    // $("#slider-range-temp").text(ui.values[0] + "°F  - " + ui.values[1] + "°F");
 					$("#temp-rangefrom").text(ui.values[0] + "°F");

@@ -85,7 +85,7 @@
 					<ul class="dropdown-menu pull-left" style="width:228px; z-index:1050; font-size:15px;">
 						<li>
 							<a href="#">
-							<i class="fa fa-bookmark-o"></i> <b >EHS</b> </a>
+							<i class="fa fa-bookmark-o"></i> <b>EHS</b> </a>
 						</li>
 						<li>
 							<a href="#">
@@ -648,8 +648,8 @@
 							<tr class="odd gradeX">
 								<td>TEMP_225</td>
 								<td class="center">Temperature Sensor</td>
-								<td class="center">65</td>
-								<td class="center">220</td>
+								<td class="center">120</td>
+								<td class="center">230</td>
 								<td class="center">									 
 									<i class="fa fa-comment text-primary tooltips" data-container="body" data-placement="top" data-original-title="Message Notifications Added"></i> &nbsp;&nbsp;
 									<i class="fa fa-envelope-o text-primary tooltips" data-container="body" data-placement="top" data-original-title="Mail Notifications Added"></i> 
@@ -763,7 +763,11 @@
 	<script>
 	jQuery(document).ready(function() {
 	 
-	 
+			$('.config1').click(function(){
+                $("#temp-rangefrom").text(120 + "°F");
+                $("#temp-rangeto").text(230 + "°F");
+            });
+
 
 	 
 				$('.newphone').hide();
